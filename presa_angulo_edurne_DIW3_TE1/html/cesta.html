@@ -1,0 +1,100 @@
+<!-- Edurne Presa Angulo - Diseño de Interfaces Web - DAW 
+ Unidad 3 - Tarea Evaluativa 1 -->
+<!--  -->
+
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <title>Birt Mobile</title> 
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../images/logo_pagina.png">
+    <meta charset="UTF-8">
+    <meta name="description" content="Tienda de venta de móviles Birt Mobile">
+    <meta name="keywords" content="birt, mobile, tienda, venta, moviles, smartphone, android, iphone">
+    <meta name="author" content="Edurne Presa Angulo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<div class="contenedor__principal">
+    <!-- Barra de navegación: presente en todas las páginas siempre en el mismo sitio-->
+    <nav class="navbar">  
+        <div class="navbar__logo">
+            <a href="../index.html"><img class="navbar__logo__img" src="../images/logotipo.png"></a>
+        </div>
+        <ul class="navbar__list">
+            <li><a class="navbar__item" href="../html/android.html">Android</a></li>
+            <li><a class="navbar__item" href="../html/iphone.html">iPhone</a></li>
+            <li><a class="navbar__item" href="../html/comparador.html">Comparador</a></li>
+            <li><a class="navbar__item"href="../html/contacto.html">Contáctanos</a></li>
+        </ul>
+        <div class="navbar__links">
+            <a href="../html/cesta.html"><img class="navbar__img img__link" src="../images/cesta.png" alt="Cesta de compras"></a>
+            <a href="../index.html"><img class="navbar__img img__link" src="../images/idioma.png" alt="Cambio de idioma"></a>
+        </div>
+    </nav>
+
+    <!-- Contenido principal del sitio -->
+    <main>
+        <section>
+            <img class="imagen__principal" src="../images/tienda.jpg" alt="Tienda física">
+        </section>
+
+        <header class="titulos__principales">
+            <h1>Productos añadidos a la cesta</h1>
+        </header>
+
+        <table>
+            <tr>
+                <th class="table__th1"></th>
+                <th class="table__th2">Producto</th>
+                <th class="table__th3">Cantidad</th>
+                <th class="table__th4">Precio</th>
+            </tr>
+            <tr>
+                <td><img class="table__img" src="../images/android_movil.png" alt="Móvil Android"></td>
+                <td class="table__modelo">Android modelo <br> Descripción producto</td>
+                <td class="table__cantidad">x1</td>
+                <td class="table__precio">1200€</td>
+            </tr>
+            <tr>
+                <td><img class="table__img" src="../images/android_movil.png" alt="Móvil Android"></td>
+                <td class="table__modelo">Android modelo <br> Descripción producto</td>
+                <td class="table__cantidad">x1</td>
+                <td class="table__precio">800€</td>
+            </tr>
+            <tr>
+                <td><img class="table__img" src="../images/iphone_articulo.png" alt="Móvil iPhone"></td>
+                <td class="table__modelo">iPhone modelo <br> Descripción producto</td>
+                <td class="table__cantidad">x1</td>
+                <td class="table__precio">1300</td>
+            </tr>
+            <tr>
+                <td class="table__total" colspan="4">Precio total: 3300€</td>
+            </tr>
+        </table>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="foot">
+        <nav class="foot__rrss">
+            <a href="https://www.tiktok.com" target="_blank"><img class="foot__rrss__item" src="../images/tik-tok.png" alt="Logo de TikTok"></a>
+            <a href="https://www.twitter.com" target="_blank"><img class="foot__rrss__item" src="../images/twitter.png" alt="Logo de Twitter/X"></a>
+            <a href="https://www.facebook.com" target="_blank"><img class="foot__rrss__item" src="../images/facebook.png" alt="Logo de Facebook"></a>
+            <a href="https://www.youtube.com" target="_blank"><img class="foot__rrss__item" src="../images/youtube.png" alt="Logo de YouTube"></a>
+            <a href="https://www.instagram.com" target="_blank"><img class="foot__rrss__item" src="../images/instagram.png" alt="Logo de Instagram"></a>
+        </nav>
+        <nav class="foot__enlaces">
+            <ul class="foot__enlaces__lista">
+                <li><a class="foot__enlaces__item " href="../index.html">Privacidad</a></li>
+                <li><a class="foot__enlaces__item " href="../index.html">Condiciones de venta</a></li>
+                <li><a class="foot__enlaces__item " href="../index.html">Términos del servicio</a></li>
+            </ul>
+        </nav>
+    </footer>
+</div>
+
+</body>
+
+</html>

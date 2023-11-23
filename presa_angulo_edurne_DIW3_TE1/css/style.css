@@ -1,0 +1,745 @@
+/* Edurne Presa Angulo - Diseño de Interfaces Web - DAW 
+ Unidad 3 - Tarea Evaluativa 1 
+    Este documento css da estilo a todos los documentos html del sitio web.
+
+    ÍNDICE del documento style.css: 
+       I.   GENERAL: Estilos aplicados a todo el documento
+            1.1 Media Queries - general
+      II.   NAV: Barra de navegación 
+            2.1 Media Queries - nav 
+     III.   FOOTER: Pie de página
+            3.1 Media Queries - footer
+      IV.   Página principal: estilos de index.html
+            4.1 Media Queries - principal
+       V.   Android y Iphone: estilos en común de android.html y iphone.html
+      VI.   Android: estilos de android.html
+            6.1 Media Queries - android
+     VII.   Iphone: estilos de iphone.html
+            7.1 Media Queries - iphone
+    VIII.   Comparador: estilos de comparador.html
+            8.1 Media Queries - comparador
+      IX.   Contacto: estilos de contacto.html
+            9.1 Media Queries - contacto
+       X.   Cesta: estilos de cesta.html
+            10.1 Media Queries - cesta
+    
+*/
+
+/*Se importa el archivo css de normalización de estilos*/
+@import "normalize.css";
+
+/*------------------------------------------------------------------------------------------------------*/
+/*  I.   GENERAL: Estilos aplicados a todo el documento */
+
+body {
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: #ffffff;
+  color: #343c40;
+}
+
+/* Organización del grid: contenedor principal */
+.contenedor__principal {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 15% auto 7%;
+}
+
+/* Hover sobre imágenes */
+.img__link:hover,
+.selector__item:hover,
+.ficha__img:hover,
+.ficha__info__btn:hover {
+  opacity: 0.65;
+}
+
+/* Títulos h1 */
+.titulos__principales {
+  font-size: 1.4rem;
+  text-align: center; 
+}
+
+/* Subtitulos */
+.body__subtitulos {
+  font-size: 2.4rem;
+} 
+
+/* Imágenes */
+.imagen__principal,
+.imagen__tienda {
+  width: 100%;
+}
+
+/* Espaciado */
+main, 
+.titulos__principales,
+.categorias__item,
+.body__subtitulos {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.imagen__tienda,
+.selector__list {
+  margin-top: 2rem;
+}
+.imagen__principal {
+  margin-bottom: 2rem;
+}
+
+/* 1.1 Media Queries - general */
+@media only screen and (max-width: 500px) {
+  body {
+    background-color: #ffffff;
+    color: #343c40;
+    margin: 0;
+    padding: 0;
+  }
+  .contenedor__principal {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    width: 500px; 
+  }
+  .imagen__principal,
+  .imagen__tienda {
+    width: 100%;
+  }
+  main .titulos__principales h1 {
+    width: 100%;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*  II.   NAV: Barra de navegación */
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navbar__logo,
+.navbar__links {
+  width: 8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.navbar__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.navbar__item {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.navbar__logo__img {
+  width: 98%;
+}
+.navbar__img {
+  width: 3rem;
+}
+.navbar__item:link,
+.navbar__item:visited,
+.navbar__item:hover,
+.navbar__item:active {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #343c40;
+}
+.navbar__item:hover,
+.navbar__item__actual {
+  font-weight: 800;
+}
+
+/* 2.1 Media Queries - nav */
+@media only screen and (max-width: 500px) {
+  .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar__logo__img {
+    width: 7rem;
+    margin-top: 0.5rem;
+  }
+  .navbar__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 1rem;
+  }
+  .navbar__list li {
+    margin-top: 0.5rem;
+  }
+  .navbar__img {
+    width: 2rem;
+    margin: 0.5rem;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*  III.   FOOTER: Pie de página */
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: #586070 solid  0.1rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+.foot__rrss {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; 
+  -webkit-box-pack: justify; 
+      -ms-flex-pack: justify; 
+          justify-content: space-between;
+}
+.foot__enlaces {
+  width: 50%;
+}
+.foot__enlaces__lista {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.foot__enlaces__item {
+  margin-left: 2rem;
+}
+.foot__enlaces__item:link,
+.foot__enlaces__item:link:visited,
+.foot__enlaces__item:hover,
+.foot__enlaces__item:active {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #343c40;
+}
+.foot__enlaces__item:hover {
+  font-weight: 800;
+}
+footer img {
+  width: 1.5rem;
+}
+.foot__rrss__item:hover {
+  width: 2rem;
+}
+
+/* 3.1 Media Queries - footer */
+@media only screen and (max-width: 500px) {
+  .foot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .foot__rrss {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .foot__enlaces {
+    width: 100%;
+  }
+  .foot__enlaces__lista {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 1rem 0;
+  }
+  .foot__enlaces__item {
+    margin-left: 2rem;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*  IV.  Página principal - Estilos de index.html */
+
+.section__categorias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;    
+}
+.categorias__item {
+  width: 28rem;
+  border-radius: 5%;
+}
+.categorias__android,
+.categorias__iphone {
+  position: relative;
+}
+.categorias__txt__android {
+  position: absolute;
+  left: 10%;
+  top: 70%
+}
+.categorias__txt__iphone {
+  position: absolute;
+  right: 10%;
+  top: 70%;
+}
+.section__tienda {
+  position: relative;
+}
+.tienda__txt {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 80%
+}
+
+/* 4.1 Media Queries - principal */
+@media only screen and (max-width: 500px) {
+  .section__categorias {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .tienda__txt {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 70%
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*  V.   Android y Iphone: estilos en común de android.html y iphone.html */
+
+.cont__android,
+.cont__iphone {
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+.fichas__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #575f72;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ficha__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.ficha__info__datos {
+  padding: 1rem;
+  color: white;
+}
+.ficha__info__datos p, 
+.ficha__info__datos h3 {
+  padding-bottom: 0.6rem;
+}
+.ficha__info__datos h3 {
+  padding-top: 0.6rem;
+}
+.ficha__info__enlaces {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.ficha__info__btn:link,
+.ficha__info__btn:visited,
+.ficha__info__btn:hover,
+.ficha__info__btn:active {
+  background-color: #343c40;
+  border-radius: 20rem;
+  margin: 0 0.9rem 0.9rem 0;
+  padding: 0.2rem 0.4rem;
+  height: auto;
+  width: auto;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.fichas__android,
+.fichas__iphone {
+  border-bottom: 0.1rem solid #586070;
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*  VI.   Android: estilos de android.html */
+
+.selector__android {
+  padding-bottom: 4rem;
+  border-bottom: 0.1rem solid #586070;
+}
+.selector__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.selector__item:link,
+.selector__item:visited,
+.selector__item:hover,
+.selector__item:active {
+  padding: 1rem;
+  width: auto;
+  background-color: #575f72;
+  border-radius: 1rem;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: none;
+}
+.fichas__android {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.ficha__img__and {
+  height: 14rem;
+  margin-left:1.5rem;
+}
+
+/* 6.1 Media Queries - android */
+@media only screen and (max-width: 500px) {
+  .selector__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: 25rem;
+  }
+  .fichas__android {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*  VII.   Iphone: estilos de iphone.html */
+
+.fichas__iphone {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.ficha__img__iph {
+  height: 14.8rem;
+  margin-left:2rem;  
+}
+
+/* 7.1 Media Queries - iphone */
+@media only screen and (max-width: 500px) {
+  .fichas__iphone {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*  VIII.   Comparador: estilos de comparador.html */
+
+.comp__imagenes {
+  text-align: center;
+}
+.comp__imagenes img {
+  width: 20rem;
+}
+.comp__cuerpo {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: #343c40;
+}
+.comp__item {
+  text-align: center;
+  margin: 0 1rem;
+  width: 80%;
+}
+.comp__img {
+  height: 20rem;
+  padding-bottom: 2rem;
+}
+.comp__tit,
+.comp__item__parte {
+  border-bottom: 0.1rem #586070 solid;
+}
+.comp__tit,
+.comp__item__parte,
+.comp__item__parte2 {
+  padding: 1rem 0;
+}
+.comp__item__parte p,
+.comp__item__parte2 p
+{
+  padding: 0.6rem 0.6rem;
+  font-size: 1.1rem; 
+}
+.comp__tit {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.5rem;
+  font-size: 1.5rem; 
+}
+
+/* 8.1 Media Queries - comparador */
+@media only screen and (max-width: 500px) {
+  .comp__imagenes {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .comp__cuerpo {
+    padding: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*  IX.   Contacto: estilos de contacto.html */
+
+.contacto__info {
+  display: grid;
+  grid-template-rows: auto auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.contacto__info p {
+  text-align: center;
+  margin: 1.5rem;
+}
+.contacto__form {
+  background-color: #ededed;
+  padding: 0.5rem;
+}
+.formulario__fila input,
+.formulario__fila textarea {
+  margin: 0.5rem;
+  border: none;
+}
+.formulario__fila input {
+  width: 70%;
+}
+.formulario__fila textarea {
+  width: 40rem;
+  height: 20rem;
+}
+.formulario__fila__envio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.5rem 0;
+}
+.formulario__envio__cuadro {
+  margin: 0 0.5rem 0 0.5rem;
+}
+.formulario__envio__etiq {
+  width: 15%;
+}
+.formulario__envio__boton {
+  width: 80%;
+  margin: 0 3rem;
+  border-radius: 1rem;
+  color: white;
+  border: none;
+  background-color: #343c40 ;
+}
+.contacto__direccion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.contacto__direccion__img {
+  width: 25rem;
+  margin: 1rem;
+}
+.contacto__direccion__info {
+  margin: 1rem 1rem 1rem 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.contacto__direccion__info h3 {
+  margin: 2rem;
+  font-size: 1.2rem;
+}
+.contacto__direccion__info p {
+  margin: 1rem;
+}
+
+/* 9.1 Media Queries - contacto */
+@media only screen and (max-width: 500px) {
+  form {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .contacto__direccion {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .formulario__fila textarea {
+    width: 95%;
+    height: 20rem;
+  }
+  .formulario__envio__etiq {
+    width: 25%;
+  }
+  .formulario__envio__boton {
+    width: 50%;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+/*  X.   Cesta: estilos de cesta.html */
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+}
+.table__img {
+  width: 7rem;
+  margin:  0.5rem 0.2rem;
+}
+th, td {
+  margin: 1rem;
+}
+.table__th2 {
+  width: 45%;
+}
+.table__th3 {
+  width: 20%;
+}
+th, td {
+  padding: 0 1rem;
+}
+.table__cantidad,
+.table__precio {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+.table__total {
+  font-size: 2rem;
+  font-weight: 800;
+  height: 7rem;
+}
+
+/* 10.1 Media Queries - cesta */
+@media only screen and (max-width: 500px) {
+  table {
+    width: 90%;
+  }
+  .table__th2 {
+    width: 25%;
+  }
+  .table__th3 {
+    width: 15%;
+  }
+}

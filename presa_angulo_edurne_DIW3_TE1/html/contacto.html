@@ -1,0 +1,112 @@
+<!-- Edurne Presa Angulo - Diseño de Interfaces Web - DAW 
+ Unidad 3 - Tarea Evaluativa 1 -->
+<!--  -->
+
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <title>Birt Mobile</title> 
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../images/logo_pagina.png">
+    <meta charset="UTF-8">
+    <meta name="description" content="Tienda de venta de móviles Birt Mobile">
+    <meta name="keywords" content="birt, mobile, tienda, venta, moviles, smartphone, android, iphone">
+    <meta name="author" content="Edurne Presa Angulo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<div class="contenedor__principal">
+    <!-- Barra de navegación: presente en todas las páginas siempre en el mismo sitio-->
+    <nav class="navbar">  
+        <div class="navbar__logo">
+            <a href="../index.html"><img class="navbar__logo__img" src="../images/logotipo.png"></a>
+        </div>
+        <ul class="navbar__list">
+            <li><a class="navbar__item" href="../html/android.html">Android</a></li>
+            <li><a class="navbar__item" href="../html/iphone.html">iPhone</a></li>
+            <li><a class="navbar__item" href="../html/comparador.html">Comparador</a></li>
+            <li><a class="navbar__item navbar__item__actual"href="../html/contacto.html">Contáctanos</a></li>
+        </ul>
+        <div class="navbar__links">
+            <a href="../html/cesta.html"><img class="navbar__img img__link" src="../images/cesta.png" alt="Cesta de compras"></a>
+            <a href="../index.html"><img class="navbar__img img__link" src="../images/idioma.png" alt="Cambio de idioma"></a>
+        </div>
+    </nav>
+
+    <!-- Contenido principal del sitio -->
+    <main>
+        <section>
+            <img class="imagen__principal" src="../images/tienda.jpg" alt="Tienda física">
+        </section>
+
+        <header class="titulos__principales">
+            <h1>Tu tienda de móviles de confianza desde 2020</h1>
+        </header>
+
+        <section class="contacto__info">
+            <p>www.birtmobile.com · info@birtmobile.com</p>
+            <form class="contacto__form">
+                <div class="formulario__fila">
+                    <input id="nombre" type="nombre" name="nombre" placeholder="Nombre">
+                </div>
+                <div class="formulario__fila">
+                    <input id="apellidos" type="apellidos" name="apellidos" placeholder="Apellidos">
+                </div>
+                <div class="formulario__fila">
+                    <input id="email" type="email" name="email" placeholder="Email">
+                </div>
+                <div class="formulario__fila">
+                    <textarea name="comentarios" id="comentarios" placeholder="Escribe aquí tu comentario"></textarea>
+                </div>
+                <div class="formulario__fila__envio">
+                    <input class="formulario__envio__cuadro" id="aviso_legal" type="checkbox" name="aviso_legal"/>
+                    <label class="formulario__envio__etiq" for="aviso_legal">Acepto el aviso legal</label>
+                    <button class="formulario__envio__boton" type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+
+        <header class="titulos__principales">
+            <h1>Cómo llegar</h1>
+        </header>
+        <section class="contacto__direccion"> 
+            <img class="contacto__direccion__img" src="../images/mapa.jpg" alt="Mapa">
+            <article class="contacto__direccion__info">
+                <div>
+                    <h3>Transporte</h3>
+                    <p><strong>Bus:</strong> Líneas 01-10-26-56-62-77-A5-G1-G6</p>
+                    <p><strong>Tren:</strong> Astigarraga - Donostia C1</p>
+                </div>
+                <div>
+                    <h3>Edificio</h3>
+                    <p><strong>Dirección:</strong> Poligonoa, Martutene. 20014 Donostia, Gipuzkoa</p>
+                    <p><strong>Teléfono: </strong>945 567 953</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="foot">
+        <nav class="foot__rrss">
+            <a href="https://www.tiktok.com" target="_blank"><img class="foot__rrss__item" src="../images/tik-tok.png" alt="Logo de TikTok"></a>
+            <a href="https://www.twitter.com" target="_blank"><img class="foot__rrss__item" src="../images/twitter.png" alt="Logo de Twitter/X"></a>
+            <a href="https://www.facebook.com" target="_blank"><img class="foot__rrss__item" src="../images/facebook.png" alt="Logo de Facebook"></a>
+            <a href="https://www.youtube.com" target="_blank"><img class="foot__rrss__item" src="../images/youtube.png" alt="Logo de YouTube"></a>
+            <a href="https://www.instagram.com" target="_blank"><img class="foot__rrss__item" src="../images/instagram.png" alt="Logo de Instagram"></a>
+        </nav>
+        <nav class="foot__enlaces">
+            <ul class="foot__enlaces__lista">
+                <li><a class="foot__enlaces__item " href="../index.html">Privacidad</a></li>
+                <li><a class="foot__enlaces__item " href="../index.html">Condiciones de venta</a></li>
+                <li><a class="foot__enlaces__item " href="../index.html">Términos del servicio</a></li>
+            </ul>
+        </nav>
+    </footer>
+</div>
+
+</body>
+
+</html>
